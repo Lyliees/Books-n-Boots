@@ -1,0 +1,78 @@
+@use 'colours';
+
+//...........................................
+
+
+.content-left, .content-right {
+    color: colours.$text;
+    font-size: 35px;
+    font-weight: 700;
+        
+    p{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+
+.wrapper-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 50px auto;
+    max-width: 80%;
+}
+
+
+.content-left {
+    margin-left: 30px;
+}
+
+
+.image-jan {
+    display: flex;
+    justify-content: center;
+}
+
+.jan {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 65%;
+}
+
+
+#fit {
+    margin-left: 125px;
+    color: colours.$main-green;
+    font-size: 25px;
+}
+
+#font-gradient {
+    font-size: 45px;
+    margin-left: 60px;
+    background-image: linear-gradient(to bottom, colours.$main-green, colours.$main-yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.about-jan {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+

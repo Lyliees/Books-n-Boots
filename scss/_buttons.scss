@@ -1,0 +1,125 @@
+@use 'colours';
+
+//............................
+.button-a,  input[type="submit"], .plan-button, .sign-up {
+    transition: all 0.3s ease-in-out;
+}
+
+//---------- INDEX.html
+.button-a {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom right, colours.$main-yellow, rgba(0, 132, 0, 0.8));
+    width: 250px;
+    padding: 1rem 1.25rem;
+    border-radius: 1.25rem;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    box-shadow: 0 8px 10px -6px colours.$main-green;
+
+    &:hover {
+        color: black;
+        box-shadow: none;
+        transform: translateY(3px);
+    }
+    
+    &:active {
+        opacity: 0.5;
+      }
+}
+
+.buttons-main {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+
+.button-last{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+
+    a {
+        width: 380px;
+    }
+}
+
+//----Plans
+.plan-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 10px solid colours.$main-green;
+    cursor: pointer;
+    opacity: 0.8;
+    text-decoration: none;
+    
+    border-radius: 0.15em;
+
+    &:hover {
+        filter: grayscale(100%);
+        color: white;
+        transform: scale(1.1);
+    }
+}
+
+.plan-button.grade-1 {
+    background-image: url(/images/grade13.png);
+  }
+.plan-button.grade-2 {
+    background-image: url(/images/grade46.jpg);
+  }
+.plan-button.sport {
+    background-image: url(/images/sport.jpg);
+  }
+.plan-button.skate {
+    background-image: url(/images/skate.jpg);
+  }
+.plan-button.camp {
+    background-image: url(/images/camp.jpg);
+  }
+
+  //----------------------Sign up
+
+  input[type="submit"], .sign-up {
+    background-image: linear-gradient(to bottom right, colours.$main-yellow, rgba(0, 132, 0, 0.8));
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    box-shadow: 0 8px 10px -6px colours.$main-green;
+
+    &:hover {
+        color: black;
+        box-shadow: none;
+        transform: translateY(3px);
+    }
+    
+    &:active {
+        opacity: 0.5;
+      }
+}
+  
+//----------------------------------- Grade 1-3
+
+.sign-up {
+    width: 100px;
+    font-weight: 700;
+}
+

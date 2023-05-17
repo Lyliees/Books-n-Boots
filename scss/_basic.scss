@@ -1,0 +1,37 @@
+@use 'colours';
+
+//...........................................
+
+
+
+html {
+    box-sizing: border-box;
+    
+  }
+  
+  *, ::before, ::after {
+    box-sizing: inherit;
+  }
+  
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: colours.$background;
+}
+
+h1 {
+    font-size: 36px;
+    background-image: linear-gradient(to bottom, colours.$main-green, colours.$main-yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+  
+ 
+  

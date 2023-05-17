@@ -1,0 +1,40 @@
+---
+layout: layouts/main-hero.njk
+title: Sign Up
+---
+<div class="form">
+<form action="submit.php" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="lesson-plan">Lesson Plan</label>
+    <select id="lesson-plan" name="lesson-plan">
+      <option value="Grade 1-3" class="lesson-option">Grade 1-3</option>
+      <option value="Grade 4-6" class="lesson-option">Grade 4-6</option>
+      <option value="Sport" class="lesson-option">Sport</option>
+      <option value="Skateboarding" class="lesson-option">Skateboarding</option>
+      <option value="Summer Camp" class="lesson-option">Summer Camp</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+  </div>
+
+  <input type="submit" value="Sign Up">
+</form>
+</div>
