@@ -13,20 +13,24 @@
 
     @media screen and (min-width: 1100px)  {
 
-            align-items: flex-end;
-            gap: 160px;
+            gap: 100px;
             flex-direction: row;
+            justify-content: flex-start;
             text-align: left;
+            margin: 10px auto 55px auto;
+            width: 85%;
+
         }
 }
 
 .content-left, .content-right {
     color: colours.$text;
-    font-size: 25px;
+    font-size: 5vw;
     font-weight: 700;
 
-    @media screen and (min-width: 1100px)  {
-        font-size: 35px;
+    @media screen and (min-width: 630px)  {
+        font-size: calc(25px + 0.390625vw);
+ 
     }
         
     p {
@@ -57,18 +61,31 @@
         }
 }
 
-
-#fit {
-    color: colours.$main-green;
-    font-size: 25px;
+.welcome {
+    @media screen and (min-width: 1100px)  {
+        margin-left: 40px;
+    }
 }
-
-#font-gradient {
-    font-size: 70px;
+.fit {
     color: colours.$main-green;
+    font-size: calc(20px + 0.390625vw);
     
     @media screen and (min-width: 1100px)  {
-        font-size: 60px;
+        margin-left: 130px;
+    }
+}
+
+.font-logo {
+    font-size: 10vw;
+    color: colours.$main-green;
+    
+    @media screen and (min-width: 720px)  {
+        font-size: 8vw;
+ 
+    }
+    @media screen and (min-width: 1100px)  {
+        font-size: 5vw;
+        margin-left: 80px;
  
     }
         

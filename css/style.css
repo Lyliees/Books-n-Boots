@@ -164,7 +164,7 @@ input[type=submit]:active, .sign-up:active {
 }
 
 #top-header {
-  font-size: 12px;
+  font-size: calc(10px + 0.390625vw);
   color: black;
   background-color: #ffcd00;
   box-shadow: 0 8px 10px -10px #00843d;
@@ -173,13 +173,18 @@ input[type=submit]:active, .sign-up:active {
 }
 
 .container-header {
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 5px 0px;
   display: flex;
   gap: 40px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 650px) {
+  .container-header {
+    justify-content: flex-start;
+  }
 }
 
 .icon {
@@ -376,21 +381,23 @@ menu {
 }
 @media screen and (min-width: 1100px) {
   .wrapper-intro {
-    align-items: flex-end;
-    gap: 160px;
+    gap: 100px;
     flex-direction: row;
+    justify-content: flex-start;
     text-align: left;
+    margin: 10px auto 55px auto;
+    width: 85%;
   }
 }
 
 .content-left, .content-right {
   color: black;
-  font-size: 25px;
+  font-size: 5vw;
   font-weight: 700;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 630px) {
   .content-left, .content-right {
-    font-size: 35px;
+    font-size: calc(25px + 0.390625vw);
   }
 }
 .content-left p, .content-right p {
@@ -421,18 +428,35 @@ menu {
   }
 }
 
-#fit {
-  color: #00843d;
-  font-size: 25px;
+@media screen and (min-width: 1100px) {
+  .welcome {
+    margin-left: 40px;
+  }
 }
 
-#font-gradient {
-  font-size: 70px;
+.fit {
   color: #00843d;
+  font-size: calc(20px + 0.390625vw);
 }
 @media screen and (min-width: 1100px) {
-  #font-gradient {
-    font-size: 60px;
+  .fit {
+    margin-left: 130px;
+  }
+}
+
+.font-logo {
+  font-size: 10vw;
+  color: #00843d;
+}
+@media screen and (min-width: 720px) {
+  .font-logo {
+    font-size: 8vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .font-logo {
+    font-size: 5vw;
+    margin-left: 80px;
   }
 }
 
