@@ -3,7 +3,7 @@
 //...........................................
 
 .desktop {
-  display: none; /* Skryje menu na výchozí šířce */
+  display: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -109,7 +109,7 @@ menu {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    max-width: 1100px;
+    max-width: 80%;
     margin: 0 auto;
     padding-inline-start: 0px;
 }
@@ -134,6 +134,7 @@ menu {
 
 .menu__checkbox:checked ~ .menu__list {
   display: block;
+  margin-top: 40px;
 }
 
 .menu__toggler {
