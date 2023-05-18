@@ -67,7 +67,7 @@
 .plan-button {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 200px;
     height: 200px;
     background-size: cover;
@@ -77,10 +77,11 @@
     font-size: 25px;
     font-weight: 700;
     text-transform: uppercase;
-    border: 10px solid colours.$main-green;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.77;
     text-decoration: none;
+    box-shadow: 0 8px 10px -10px colours.$main-green;
+
     
     border-radius: 0.15em;
 

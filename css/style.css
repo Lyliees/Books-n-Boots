@@ -15,7 +15,7 @@ body {
 
 h1 {
   font-size: 36px;
-  background-image: #00843d;
+  color: #00843d;
 }
 
 .main {
@@ -82,7 +82,7 @@ h1 {
 .plan-button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 200px;
   height: 200px;
   background-size: cover;
@@ -92,10 +92,10 @@ h1 {
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
-  border: 10px solid #00843d;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.77;
   text-decoration: none;
+  box-shadow: 0 8px 10px -10px #00843d;
   border-radius: 0.15em;
 }
 .plan-button:hover {
@@ -461,11 +461,18 @@ menu {
 
 .main-content {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   max-width: 80%;
   margin: 50px auto;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .main-content {
+    text-align: left;
+    justify-content: flex-start;
+    max-width: 60%;
+  }
 }
 
 .about-jan {
@@ -474,6 +481,67 @@ menu {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 720px) {
+  .map {
+    flex-direction: row;
+    gap: 150px;
+  }
+}
+
+.map-right {
+  max-width: 30vw;
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    padding-left: 30px;
+  }
+}
+
+.contact-info {
+  font-weight: 700;
+  font-size: calc(12px + 0.390625vw);
+}
+@media screen and (min-width: 1200px) {
+  .contact-info {
+    font-size: calc(18px + 0.390625vw);
+  }
+}
+
+.call {
+  font-weight: 500;
+  font-size: calc(12px + 0.390625vw);
+}
+@media screen and (min-width: 720px) {
+  .call {
+    padding-left: 100px;
+    font-weight: 600;
+  }
+}
+
+.bank {
+  margin-top: 40px;
+}
+.bank h3, .bank p {
+  margin: 0;
+}
+
+.frame {
+  display: none;
+}
+@media screen and (min-width: 745px) {
+  .frame {
+    display: block;
+  }
 }
 
 .hero-banner {
@@ -523,7 +591,9 @@ option {
 }
 
 .icon-contact {
-  width: 30px;
+  width: 20px;
+  color: #00843d;
+  margin-right: 3px;
 }
 
 .container {
@@ -534,7 +604,7 @@ option {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 .container a {
   margin-bottom: 20px;

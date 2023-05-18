@@ -94,11 +94,21 @@
 
 .main-content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     max-width: 80%;
     margin: 50px auto;
     text-align: center;
+
+    @media screen and (min-width: 1200px)  {
+        
+        text-align: left;
+        justify-content: flex-start;
+        max-width: 60%;
+
+
+  
+     }
 }
 
 .about-jan {
@@ -111,5 +121,68 @@
 
 
 
+.map {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 720px)  {
+       flex-direction: row;
+       gap: 150px;
+ 
+    }
+}
+
+.map-right {
+    max-width: 30vw;
+}
+
+.address {
+    @media screen and (min-width: 1200px)  {
+    padding-left: 30px;
+    }
+}
+
+.contact-info {
+    font-weight: 700;
+    font-size: calc(12px + 0.390625vw);
 
 
+    @media screen and (min-width: 1200px)  {
+        font-size: calc(18px + 0.390625vw);
+    }
+   
+}
+
+.call {
+    font-weight: 500;
+    font-size: calc(12px + 0.390625vw);
+
+
+
+    @media screen and (min-width: 720px)  {
+        padding-left: 100px;
+        font-weight: 600;
+
+     }
+}
+
+
+.bank {
+    margin-top: 40px;
+
+    h3, p {
+    margin: 0;
+    }
+}
+
+
+.frame {
+    display: none;
+
+    @media screen and (min-width: 745px)  {
+        display: block;
+     }
+}
