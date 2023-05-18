@@ -2,80 +2,95 @@
 
 //...........................................
 
+.desktop {
+  display: none; /* Skryje menu na výchozí šířce */
+}
+
+@media screen and (min-width: 900px) {
+  .desktop {
+    display: block;
+  }
+
 nav {
-    &.main-menu {
+  &.desktop-menu {
+      display: block;
+      text-align: right;
+      font-size: 16px;
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        display: inline-block;
+        padding: 0 10px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+      }
+  
+      li a {
+        color: black;
+      }
+  
+      li a:hover {
+          border-bottom: 1px solid black;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          padding-left: 0;
+          left: 0;
+          display: none;
+          background: white;
+          
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
         display: block;
-        text-align: right;
-        font-size: 16px;
-    
-        ul li {
-          list-style: none;
-          margin: 0 auto;
-          display: inline-block;
-          padding: 0 10px;
-          position: relative;
+        width: 150px;
+        text-align: center;
+        padding-top: 10px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+        z-index: 9999;
+
+      }
+  
+      ul li ul li {
+          clear: both;
+          margin-bottom: 2px;
+          border-style: none;
           text-decoration: none;
-          text-align: center;
-          font-weight: 600;
-        }
-    
-        li a {
+          background-color: colours.$main-yellow;
+          width: 120px;
+          padding: 5px 10px;
+          border-radius: 20px;
           color: black;
-        }
-    
-        li a:hover {
-            border-bottom: 1px solid black;
-        }
-    
-        li:hover {
-          cursor: pointer;
-        }
-    
-        ul li ul {
-            visibility: hidden;
-            opacity: 0;
-            position: absolute;
-            padding-left: 0;
-            left: 0;
-            display: none;
-            background: white;
-        }
-    
-        ul li:hover > ul,
-        ul li ul:hover {
-          visibility: visible;
-          opacity: 1;
-          display: block;
-          width: 150px;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+}
+      }
+  
+      ul li ul li a:hover {
+          width: 140px;
+          transition: all 0.3s ease;
+          font-size: 13px;
+          border-bottom: none;
+          font-weight: 700;
           text-align: center;
-          padding-top: 10px;
-          box-shadow: 0px 3px 5px -1px #ccc;
-        }
-    
-        ul li ul li {
-            clear: both;
-            text-align: center;
-            margin-bottom: 2px;
-            border-style: none;
-            text-decoration: none;
-            background-color: colours.$main-yellow;
-            width: 120px;
-            padding: 5px 10px;
-            border-radius: 20px;
-            color: black;
-            font-size: 12px;
-        }
-    
-        ul li ul li a:hover {
-            width: 140px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            border-bottom: none;
-            font-weight: 700;
-        }
+
       }
     }
-    
+ 
     a {
     
         text-decoration: none;
@@ -85,8 +100,10 @@ nav {
         }
      
     }
-    
-ul li ul li a { transition: all 0.5s ease; }
+  
+
+  }
+
 
 menu {
     display: flex;
@@ -99,6 +116,89 @@ menu {
 
 .logo {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 25px;
 }
 
+//------ MOBILE HAMBURGER MENU
+
+.mobile, .mobile-menu {
+  display: block; 
+  z-index: 9999;
+
+}
+
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
+}
+
+.menu__toggler {
+  cursor: pointer;
+  width: 30px;
+  height: 3px;
+  background-color: colours.$main-green;
+  position: relative;
+}
+
+.menu__toggler::before,
+.menu__toggler::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: colours.$main-green;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+
+.menu__toggler::before {
+  top: -8px;
+}
+
+.menu__toggler::after {
+  top: 8px;
+}
+
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  width: 80%;
+  background: white;
+  position: absolute;
+  left: 0;
+  padding: 5%;
+  border-top: 3px solid colours.$main-green;
+  margin: 0 80px;
+  font-size: 16px; 
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+.menu__item {
+  margin-bottom: 10px;
+  font-weight: 600;
+
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 10px 5%;
+  border-bottom: 1px solid rgba(0,0,0,.03);
+  
+}
+
+
+
+
+@media screen and (min-width: 899px) {
+  .mobile {
+    display: none; 
+}
+}

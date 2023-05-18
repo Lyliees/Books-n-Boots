@@ -8,7 +8,7 @@
 //---------- INDEX.html
 .button-a {
     text-decoration: none;
-    background-image: linear-gradient(to bottom right, colours.$main-yellow, rgba(0, 132, 0, 0.8));
+    background-color: colours.$main-yellow;
     width: 250px;
     padding: 1rem 1.25rem;
     border-radius: 1.25rem;
@@ -18,7 +18,7 @@
     cursor: pointer;
     text-align: center;
     display: block;
-    box-shadow: 0 8px 10px -6px colours.$main-green;
+    box-shadow: 0 8px 10px -10px colours.$main-green;
 
     &:hover {
         color: black;
@@ -34,8 +34,23 @@
 .buttons-main {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+
+    @media screen and (min-width: 640px)  {
+        gap: 30px;    
+       
+    }
+    
+    @media screen and (min-width: 1100px)  {
+        gap: 40px;    
+       
+    }
+
+
 }
 
 .button-last{
@@ -95,7 +110,7 @@
   //----------------------Sign up
 
   input[type="submit"], .sign-up {
-    background-image: linear-gradient(to bottom right, colours.$main-yellow, rgba(0, 132, 0, 0.8));
+    background-color: colours.$main-yellow;
     color: black;
     padding: 10px 20px;
     border: none;
