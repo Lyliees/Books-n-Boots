@@ -137,6 +137,7 @@ input[type=submit], .sign-up {
   margin-top: 10px;
   display: block;
   box-shadow: 0 8px 10px -6px #00843d;
+  appearance: none;
 }
 input[type=submit]:hover, .sign-up:hover {
   color: black;
