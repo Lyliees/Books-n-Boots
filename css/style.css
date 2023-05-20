@@ -707,8 +707,7 @@ option {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
-  row-gap: 85px;
-  column-gap: 60px;
+  gap: 40px;
   margin: 0 auto;
   justify-content: center;
   margin-top: 60px;
@@ -718,7 +717,6 @@ option {
 .price {
   display: flex;
   flex-direction: column;
-  width: 20%;
 }
 
 .image-price {
@@ -744,6 +742,14 @@ option {
   font-weight: 700;
 }
 
+.date {
+  font-size: 10px;
+}
+
+.tag-date {
+  margin-bottom: 5px;
+}
+
 .image-13 {
   background-image: url(/images/grade13.JPG);
 }
@@ -762,4 +768,13 @@ option {
 
 .image-camp {
   background-image: url(/images/camp.jpg);
+}
+
+.discount {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 700;
+  color: #00843d;
 }/*# sourceMappingURL=style.css.map */
