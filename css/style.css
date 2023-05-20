@@ -23,6 +23,15 @@ h1 {
   margin: 0 auto;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid black;
+  color: black;
+}
+
 .button-a, input[type=submit], .plan-button, .sign-up {
   transition: all 0.3s ease-in-out;
 }
@@ -45,6 +54,7 @@ h1 {
   color: black;
   box-shadow: none;
   transform: translateY(3px);
+  border: none;
 }
 .button-a:active {
   opacity: 0.5;
@@ -190,13 +200,9 @@ input[type=submit]:active, .sign-up:active {
   padding-right: 5px;
 }
 
-.contact-header a {
+a {
   color: black;
   text-decoration: none;
-}
-.contact-header a:hover {
-  border-bottom: 1px solid black;
-  color: black;
 }
 
 .desktop {
@@ -206,6 +212,7 @@ input[type=submit]:active, .sign-up:active {
 @media screen and (min-width: 1100px) {
   .desktop {
     display: block;
+    margin-top: 5px;
   }
   nav.desktop-menu {
     display: block;
@@ -224,9 +231,6 @@ input[type=submit]:active, .sign-up:active {
   }
   nav.desktop-menu li a {
     color: black;
-  }
-  nav.desktop-menu li a:hover {
-    border-bottom: 1px solid black;
   }
   nav.desktop-menu li:hover {
     cursor: pointer;
@@ -273,12 +277,6 @@ input[type=submit]:active, .sign-up:active {
     font-weight: 700;
     text-align: center;
   }
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    color: #3CA0E7;
-  }
 }
 menu {
   display: flex;
@@ -294,7 +292,7 @@ menu {
   font-size: 25px;
 }
 
-.mobile, .mobile-menu {
+.mobile, .mobile-menu, .logo-text {
   display: block;
   z-index: 9999;
 }
@@ -365,7 +363,7 @@ menu {
 }
 
 @media screen and (min-width: 1100px) {
-  .mobile {
+  .mobile, .logo-text {
     display: none;
   }
 }
@@ -483,58 +481,6 @@ menu {
   margin: 0 auto;
 }
 
-.map {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0;
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 720px) {
-  .map {
-    flex-direction: row;
-    gap: 150px;
-  }
-}
-
-.map-right {
-  max-width: 30vw;
-}
-
-@media screen and (min-width: 1200px) {
-  .address {
-    padding-left: 30px;
-  }
-}
-
-.contact-info {
-  font-weight: 700;
-  font-size: calc(12px + 0.390625vw);
-}
-@media screen and (min-width: 1200px) {
-  .contact-info {
-    font-size: calc(18px + 0.390625vw);
-  }
-}
-
-.call {
-  font-weight: 500;
-  font-size: calc(12px + 0.390625vw);
-}
-@media screen and (min-width: 720px) {
-  .call {
-    padding-left: 100px;
-    font-weight: 600;
-  }
-}
-
-.bank {
-  margin-top: 40px;
-}
-.bank h3, .bank p {
-  margin: 0;
-}
-
 .frame {
   display: none;
 }
@@ -612,6 +558,7 @@ option {
 }
 .container a {
   margin-bottom: 20px;
+  border: none;
 }
 
 .grade-english {
@@ -656,7 +603,7 @@ option {
   margin-bottom: 40px;
 }
 
-.container-sport, .container-times {
+.container-sport {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -697,10 +644,6 @@ option {
 
 .camp {
   margin-bottom: 80px;
-}
-
-.container-times {
-  font-weight: 700;
 }
 
 .container-price {
@@ -777,4 +720,77 @@ option {
   margin-top: 40px;
   font-weight: 700;
   color: #00843d;
+}
+
+.container-times {
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-size: calc(12px + 0.390625vw);
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .container-times {
+    width: 60%;
+    justify-content: center;
+  }
+}
+
+.column {
+  flex: 1 1 200px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 720px) {
+  .map {
+    flex-direction: row;
+    gap: 150px;
+  }
+}
+
+.map-right {
+  max-width: 30vw;
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    padding-left: 30px;
+  }
+}
+
+.contact-info {
+  font-weight: 700;
+  font-size: calc(12px + 0.390625vw);
+}
+@media screen and (min-width: 1200px) {
+  .contact-info {
+    font-size: calc(18px + 0.390625vw);
+  }
+}
+
+.call {
+  font-weight: 500;
+  font-size: calc(12px + 0.390625vw);
+}
+@media screen and (min-width: 720px) {
+  .call {
+    padding-left: 100px;
+    font-weight: 600;
+  }
+}
+
+.bank {
+  margin-top: 40px;
+}
+.bank h3, .bank p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

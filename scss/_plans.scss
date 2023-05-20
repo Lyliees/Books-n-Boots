@@ -15,6 +15,7 @@
 
     a {
         margin-bottom: 20px;
+        border: none;
     }
 }
 
@@ -65,7 +66,7 @@
     margin-bottom: 40px;
 }
 
-.container-sport, .container-times {
+.container-sport {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -110,6 +111,4 @@
     margin-bottom: 80px;
 }
 
-.container-times {
-    font-weight: 700;
-}
+

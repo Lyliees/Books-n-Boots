@@ -1,0 +1,24 @@
+@use 'colours';
+
+//--------------------------------
+
+.container-times {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-size: calc(12px + 0.390625vw);
+    text-align: center;
+
+
+    @media screen and (max-width: 800px) {
+        width: 60%;
+        justify-content: center;
+    }
+}
+
+.column {
+    flex: 1 1 200px;
+}
