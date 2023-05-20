@@ -1,0 +1,67 @@
+.container-price {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    row-gap: 85px;
+    column-gap: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 60px;
+    align-items: center;
+}
+
+
+.price {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    
+  }
+  
+  .image-price {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+ }
+  
+  .text-price {
+    font-size: 12px;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+
+    h2 {
+        font-size: 14px;
+    }
+  }
+
+  .price-tag {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .image-13 {
+    background-image: url(/images/grade13.JPG);
+  }
+  
+ .image-46 {
+    background-image: url(/images/grade46.jpg);
+  }
+  
+.image-sport {
+    background-image: url(/images/sport.JPG);
+  }
+.image-skate {
+    background-image: url(/images/skate.JPG);
+  }
+
+ .image-camp {
+    background-image: url(/images/camp.jpg);
+  }
+  
+  
+  
+
+  
