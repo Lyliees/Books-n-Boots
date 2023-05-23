@@ -24,6 +24,13 @@
 .grade-english {
     display: flex;
     justify-content: center;
+       
+    h1 {
+        text-align: center;
+    }
+
+
+
 }
 
 .container-english {
@@ -32,7 +39,28 @@
     margin-bottom: 60px;
     gap: 10px;
     justify-content: center;
+    flex-direction: column;
+    
+    @media screen and (min-width: 745px)  {
+        flex-direction: row;
+     }
 
+}
+
+.column-left {
+    text-align: center;
+
+    @media screen and (min-width: 745px)  {
+        width: 460px;
+        text-align: left;
+     }
+   
+}
+
+.column-right {
+    width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .english {
@@ -42,19 +70,11 @@
         margin-top: 10px;
         font-weight: 700;
         font-size: 16px;
-        
+        text-align: left; 
     }
   }
 
-.column-left {
-    width: 460px;
-}
 
-.column-right {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-}
 
 .photo-plan {
     max-width: 90%;
